@@ -14,12 +14,20 @@ public:
     }
     std::cout << "~thread_guard end" << std::endl;
   }
-  thread_guard(thread_guard const&) = delete; // constructor
-  thread_guard& operator=(thread_guard const&) = delete;
+  // The copy constructor and copy-assignment operators
+  // are marked =delete to ensure that they’re not
+  // automatically provided by the compiler. Copying or
+  // assigning such an object would be dangerous, because
+  // it might then outlive the scope of the thread it was
+  // joining. By declaring them as deleted, any attempt to
+  // copy a thread_guard object will generate a compilation error
+  thread_guard(thread_guard const&) = delete; // copy constructor
+  thread_guard& operator=(thread_guard const&) = delete; // copy-assignment operator
 };
 
 void do_something(int& i) {
   ++i;
+  return;
 }
 
 struct func {
