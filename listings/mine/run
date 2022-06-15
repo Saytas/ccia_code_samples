@@ -4,5 +4,7 @@ rm -rf listing_1.1 listing_2.1
 #g++ -std=c++20 -g -Wall -Wextra -Iinclude -fno-exceptions -pthread -o listing_2.1 listing_2.1.cpp 
 #g++ -std=c++20 -g -Wall -Wextra -Iinclude -pthread -o listing_2.2 listing_2.2.cpp 
 #g++ -std=c++20 -g -Wall -Wextra -Iinclude -pthread -o listing_2.3 listing_2.3.cpp 
-g++ -std=c++20 -g -Wall -Wextra -Iinclude -pthread -o listing_2.4 listing_2.4.cpp 
+#g++ -std=c++20 -g -Wall -Wextra -Iinclude -pthread -o listing_2.4 listing_2.4.cpp 
+#g++ -std=c++20 -g -Wall -Wextra -Iinclude -pthread -o listing_2.5 listing_2.5.cpp 
+g++ -std=c++20 -g -Wall -Wextra -Iinclude -pthread -o listing_2.6 listing_2.6.cpp 
 rm -rf *.dSYM
